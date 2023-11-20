@@ -20,3 +20,12 @@ Clone o repositório e navegue até o diretório do projeto:
 ```sh
 git https://github.com/erikdobrychtop/bitzen.git
 cd bitzen
+
+Para executar o projeto
+docker-compose up -d --build
+
+Para abrir no browser
+http://localhost:8080/
+
+Collection do Postman está na raiz do projet
+Bitzen.postman_collection.json

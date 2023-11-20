@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "380585b0-137f-4e4e-b542-c02c24be4e63",
+		"name": "Bitzen",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "928574"
+	},
+	"item": [
+		{
+			"name": "GET /companies (Listar todas as empresas)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /companies (Criar uma nova empresa)",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n           \"razao_social\": \"Empresa Exemplo\",\r\n           \"nome_fantasia\": \"Exemplo\",\r\n           \"cnpj\": \"12345678000190\",\r\n           \"data_fundacao\": \"2000-01-01\",\r\n           \"email_responsavel\": \"contato@empresaexemplo.com\",\r\n           \"nome_responsavel\": \"Responsável Exemplo\"\r\n         }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/companies",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /companies/{company} (Mostrar uma empresa específica)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/companies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PUT /companies/{company} (Atualizar uma empresa específica)",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n           \"razao_social\": \"Empresa Exemplo Atualizada\",\r\n           \"nome_fantasia\": \"Exemplo Atualizado\",\r\n           \"cnpj\": \"12345678000190\",\r\n           \"data_fundacao\": \"2000-01-02\",\r\n           \"email_responsavel\": \"novocontato@empresaexemplo.com\",\r\n           \"nome_responsavel\": \"Novo Responsável Exemplo\"\r\n         }"
+				},
+				"url": {
+					"raw": "http://localhost:8000/api/companies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /companies/{company} (Excluir uma empresa)",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer YOUR_ACCESS_TOKEN"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8000/api/companies/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"companies",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
